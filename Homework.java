@@ -68,4 +68,50 @@ class Homework{
         System.out.println(even +", " + odd);
      }
 
+import java.util.Arrays;
+
+public class Homework{
+
+    public int findMin(int [] numbers){
+
+        int minNum = numbers[0];
+
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i] < minNum){
+                minNum = numbers[i];
+            }
+        }
+        return minNum;
+    }
+
+    public int findMax(int [] numbers){
+
+        int maxNum = numbers[0];
+        
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i] > maxNum){
+                maxNum = numbers[i];
+            }
+        }
+        return maxNum;
+    }
+
+    public int findAverage(int [] numbers){
+        int sum = 0;
+
+        for(int value : numbers){
+            sum += value;
+        }
+        
+        int average = sum / numbers.length;
+
+        int [] copiedNums = new int[numbers.length];
+
+        for (int i = 0; i < numbers.length; i++) {
+            copiedNums[i] = numbers[i] - average;
+        }
+        System.out.println(Arrays.toString(copiedNums));
+
+        return average;
+    }
 }
