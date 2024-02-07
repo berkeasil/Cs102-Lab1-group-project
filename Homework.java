@@ -42,4 +42,30 @@ class Homework{
         
     }
   
+    public static int[] createRandomArray(int arraySize) {
+
+        Random r = new Random();
+        int[] arr = new int[arraySize];
+
+        for (int i = 0; i < arraySize; i++) {
+            arr[i] = r.nextInt(101);
+        }
+        return arr;
+    }
+    public static void oddEven(int[] arr) {
+        int odd = 0;
+        int even = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                even += arr[i];
+            }
+            else {
+                odd += arr[i];
+            }
+        }
+
+        System.out.println(even +", " + odd);
+     }
+
 }
