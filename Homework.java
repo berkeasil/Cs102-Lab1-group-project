@@ -8,12 +8,16 @@ class Homework{
         int arraySize;
         int choice;
 
+        // First get array size from the user.
         System.out.println("Enter the size of the array");
 
         arraySize = in.nextInt();
 
+        // Create random array
         int [] mainArray = createRandomArray(arraySize);
         System.out.println("Your array is " + Arrays.toString(mainArray));
+        
+        // Ask user which action he/she wants to do 
         do{
             System.out.println("1. Find the minimum of the array");
             System.out.println("2. Find the maximum of the array");
@@ -23,6 +27,7 @@ class Homework{
             System.out.println("Select one option: 1,2,3,4 or 5");
             choice  = in.nextInt();
 
+            // Display the answer according to user choice
             if(choice == 1)
             {
                 System.out.println("The minimum of the array: ");
@@ -51,7 +56,13 @@ class Homework{
 
         
     }
-  
+    
+
+    /**
+    * Create random array in given size
+    * @param int. Given array size form the user
+    * @return int[]. Return the created random array
+    */
     public static int[] createRandomArray(int arraySize) {
 
         Random r = new Random();
@@ -63,6 +74,11 @@ class Homework{
         return arr;
     }
 
+    /**
+    * Find the minimum number in the array
+    * @param int[]. The array that we want to find minimimum number in.
+    * @return Nothing.
+    */
     public static void findMin(int [] numbers){
 
         int minNum = numbers[0];
@@ -75,6 +91,11 @@ class Homework{
         System.out.println(minNum);
     }
 
+    /**
+    * Find the maximum number in the array
+    * @param int[]. The array that we want to find maximum number in.
+    * @return Nothing.
+    */
     public static void findMax(int [] numbers){
 
         int maxNum = numbers[0];
@@ -87,6 +108,11 @@ class Homework{
         System.out.println(maxNum);
     }
 
+    /**
+    * Find the average of the array
+    * @param int[]. The array that we want to find the average.
+    * @return Nothing.
+    */
     public static void findAverage(int [] numbers){
         int sum = 0;
 
@@ -105,6 +131,11 @@ class Homework{
         System.out.println(Arrays.toString(copiedNums));
     }
 
+    /**
+    * Find the sum of even and odd numbers
+    * @param int[]. The array contains the numbers.
+    * @return Nothing.
+    */
     public static void oddEven(int[] arr) {
         int odd = 0;
         int even = 0;
